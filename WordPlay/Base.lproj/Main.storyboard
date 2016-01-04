@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O19-uC-QQq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O19-uC-QQq">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--openingScreen-->
@@ -17,27 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WordPlay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voi-Oc-b5u">
-                                <rect key="frame" x="200" y="72" width="200" height="54"/>
-                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="WordPlay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voi-Oc-b5u">
+                                <rect key="frame" x="75" y="72" width="450" height="110"/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="88"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to WordPlay!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qz5-Qp-pr0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Welcome to WordPlay!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qz5-Qp-pr0">
                                 <rect key="frame" x="200" y="190" width="200" height="22"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You'll be asked to enter different words in order to create a hilarious result." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZV-aT-7nx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You'll be asked to enter different words in order to create a hilarious result." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZV-aT-7nx">
                                 <rect key="frame" x="200" y="209" width="205" height="71"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB9-cQ-i9r">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB9-cQ-i9r">
                                 <rect key="frame" x="240" y="288" width="120" height="40"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Cbj-KT-wP3"/>
+                                    <constraint firstAttribute="width" constant="120" id="kBJ-t2-q1U"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
                                 <state key="normal" title="Begin"/>
                                 <connections>
@@ -46,12 +50,31 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="CB9-cQ-i9r" secondAttribute="trailing" constant="220" id="1YL-42-dWw"/>
+                            <constraint firstItem="CB9-cQ-i9r" firstAttribute="top" secondItem="qz5-Qp-pr0" secondAttribute="bottom" constant="76" id="21o-jV-uJg"/>
+                            <constraint firstItem="voi-Oc-b5u" firstAttribute="top" secondItem="6ag-q9-Zm3" secondAttribute="bottom" constant="8" id="4fX-MP-r54"/>
+                            <constraint firstItem="qz5-Qp-pr0" firstAttribute="leading" secondItem="4te-aU-cfc" secondAttribute="leadingMargin" constant="180" id="666-AF-Tsw"/>
+                            <constraint firstItem="voi-Oc-b5u" firstAttribute="leading" secondItem="4te-aU-cfc" secondAttribute="leadingMargin" constant="55" id="68m-XM-dNF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="voi-Oc-b5u" secondAttribute="trailing" constant="55" id="9Zl-HT-yk0"/>
+                            <constraint firstItem="vaj-RO-Ewl" firstAttribute="top" secondItem="CB9-cQ-i9r" secondAttribute="bottom" constant="272" id="BAJ-oC-8H7"/>
+                            <constraint firstItem="mZV-aT-7nx" firstAttribute="leading" secondItem="4te-aU-cfc" secondAttribute="leadingMargin" constant="180" id="Bx2-Yx-FLZ"/>
+                            <constraint firstItem="CB9-cQ-i9r" firstAttribute="leading" secondItem="4te-aU-cfc" secondAttribute="leadingMargin" constant="220" id="DyQ-Sm-rcX"/>
+                            <constraint firstItem="qz5-Qp-pr0" firstAttribute="top" secondItem="voi-Oc-b5u" secondAttribute="bottom" constant="64" id="TgS-Hx-PgN"/>
+                            <constraint firstItem="voi-Oc-b5u" firstAttribute="centerX" secondItem="4te-aU-cfc" secondAttribute="centerX" id="WJK-KV-wSv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mZV-aT-7nx" secondAttribute="trailing" constant="175" id="aEn-Yy-CEM"/>
+                            <constraint firstItem="CB9-cQ-i9r" firstAttribute="top" secondItem="mZV-aT-7nx" secondAttribute="bottom" constant="8" id="cgg-BA-m84"/>
+                            <constraint firstItem="CB9-cQ-i9r" firstAttribute="top" secondItem="mZV-aT-7nx" secondAttribute="bottom" constant="8" id="dPS-A1-cKo"/>
+                            <constraint firstItem="qz5-Qp-pr0" firstAttribute="leading" secondItem="4te-aU-cfc" secondAttribute="leadingMargin" constant="180" id="fr2-s7-1p4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qz5-Qp-pr0" secondAttribute="trailing" constant="180" id="iU0-Mt-bqd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qz5-Qp-pr0" secondAttribute="trailing" constant="180" id="jhL-DL-7rV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R30-IE-bKE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71y-Mg-moS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="-183"/>
+            <point key="canvasLocation" x="885" y="-183"/>
         </scene>
         <!--adjective-->
         <scene sceneID="xC4-V7-cgR">
@@ -88,7 +111,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="adjectiveTextFieldDidEnd:" destination="s35-0e-1kh" eventType="editingDidEnd" id="6ai-BO-EHE"/>
+                                    <action selector="adjectiveTextFieldEditingChanged:" destination="s35-0e-1kh" eventType="editingChanged" id="4vF-lw-uPF"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtU-XT-PdM">
@@ -103,9 +126,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="wal-3Q-Uwn" appends="YES" id="kDA-mI-BGc"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="adjectiveButton" destination="VtU-XT-PdM" id="RnC-gC-8SY"/>
@@ -113,11 +133,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsB-jL-WAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="wal-3Q-Uwn">
-                    <connections>
-                        <action selector="tapGestureRecognizer:" destination="s35-0e-1kh" id="KMm-dT-twe"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="800" y="619"/>
         </scene>
@@ -189,7 +204,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="nountextFieldDidEnd:" destination="q3n-mq-cx9" eventType="editingDidEnd" id="GqQ-wZ-1Cs"/>
+                                    <action selector="nounTextFieldEditingChanged:" destination="q3n-mq-cx9" eventType="editingChanged" id="Fjt-cO-JMm"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zv6-jN-4vb">
@@ -211,9 +226,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="tLW-AN-j8p" appends="YES" id="Sl0-Xi-Zib"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="nounButton" destination="Zv6-jN-4vb" id="0g2-7W-Nij"/>
@@ -221,11 +233,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtA-0U-MG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="tLW-AN-j8p">
-                    <connections>
-                        <action selector="TapGestureRecognizer:" destination="q3n-mq-cx9" id="sbM-AF-4nW"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1508" y="-190"/>
         </scene>
@@ -258,7 +265,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="verbTextFieldDIdEnd:" destination="D9d-Qd-0Wk" eventType="editingDidEnd" id="9uG-ig-RmW"/>
+                                    <action selector="verbTextFieldEditingChanged:" destination="D9d-Qd-0Wk" eventType="editingChanged" id="w7d-kH-azN"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdK-EL-aGO">
@@ -279,9 +286,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="eOa-YD-wXI" appends="YES" id="Xcz-hZ-u1h"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="verbButton" destination="wdK-EL-aGO" id="svy-eW-hhI"/>
@@ -289,11 +293,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKZ-0d-KD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="eOa-YD-wXI">
-                    <connections>
-                        <action selector="TapGestureRecognizer:" destination="D9d-Qd-0Wk" id="HkK-me-ef9"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-12" y="619"/>
         </scene>

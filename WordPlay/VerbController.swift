@@ -31,15 +31,18 @@ class VerbController: UIViewController {
             adjectiveController.title = importMadLib.verb
         }
     }
-    
-    @IBAction func verbTextFieldDIdEnd(sender: UITextField) {
+ 
+    @IBAction func verbTextFieldEditingChanged(sender: UITextField) {
         importMadLib.verb = verbTextField.text!
-        verbButton.enabled = true
+        if verbTextField.text != ""
+        {
+            verbButton.enabled = true
+        }
+        else
+        {
+            verbButton.enabled = false
+        }
     }
 
-    @IBAction func TapGestureRecognizer(sender: UITapGestureRecognizer) {
-        importMadLib.verb = verbTextField.text!
-        verbButton.enabled = true
-    }
     
 }

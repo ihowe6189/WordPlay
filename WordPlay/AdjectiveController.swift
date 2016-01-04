@@ -9,8 +9,6 @@
 import UIKit
 class AdjectiveController: UIViewController {
     
-//    @IBOutlet weak var verbTextField: UITextField!
-//    @IBOutlet weak var verbButton: UIButton!
     @IBOutlet weak var adjectiveTextField: UITextField!
     @IBOutlet weak var adjectiveButton: UIButton!
     
@@ -29,21 +27,17 @@ class AdjectiveController: UIViewController {
             finalController.title = "" + importMadLib.noun + " | " + importMadLib.verb + " | " + importMadLib.adjective
         }
     }
-//    
-//    @IBAction func verbTextFieldDIdEnd(sender: UITextField) {
-//        importMadLib.noun = verbTextField.text!
-//        verbButton.enabled = true
-//    }
-    
-    @IBAction func adjectiveTextFieldDidEnd(sender: UITextField) {
-        importMadLib.adjective = adjectiveTextField.text!
-        adjectiveButton.enabled = true
-    }
-    
-    @IBAction func tapGestureRecognizer(sender: UITapGestureRecognizer) {
-        importMadLib.adjective = adjectiveTextField.text!
-        adjectiveButton.enabled = true
 
+    @IBAction func adjectiveTextFieldEditingChanged(sender: UITextField) {
+        importMadLib.adjective = adjectiveTextField.text!
+        if adjectiveTextField.text != ""
+        {
+            adjectiveButton.enabled = true
+        }
+        else
+        {
+            adjectiveButton.enabled = false
+        }
     }
     
 }

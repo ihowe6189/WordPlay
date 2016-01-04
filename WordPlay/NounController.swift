@@ -28,17 +28,17 @@ class NounController: UIViewController {
             verbController.title = importMadLib.noun
         }
     }
-    @IBAction func nountextFieldDidEnd(sender: UITextField){
+    
+    @IBAction func nounTextFieldEditingChanged(sender: UITextField) {
         importMadLib.noun = nounTextField.text!
-        nounButton.enabled = true
+        if nounTextField.text != ""
+        {
+            nounButton.enabled = true
+        }
+        else
+        {
+            nounButton.enabled = false
+        }
         
     }
-
-    @IBAction func TapGestureRecognizer(sender: UITapGestureRecognizer) {
-        importMadLib.noun = nounTextField.text!
-        nounButton.enabled = true
-    }
-    
-    
-    
 }
