@@ -13,6 +13,7 @@ class VerbController: UIViewController {
     
     @IBOutlet weak var verbTextField: UITextField!
     @IBOutlet weak var verbButton: UIButton!
+    @IBOutlet weak var verbProgressBar: UIProgressView!
     
     
     

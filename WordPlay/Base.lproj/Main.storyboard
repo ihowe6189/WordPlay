@@ -123,12 +123,17 @@
                                     <segue destination="c81-yv-sG3" kind="show" identifier="adjectiveToFinal" id="PJa-HR-2gS"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.66600000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Rty-Y7-l5e">
+                                <rect key="frame" x="225" y="395" width="150" height="2"/>
+                                <color key="progressTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
                     <connections>
                         <outlet property="adjectiveButton" destination="VtU-XT-PdM" id="RnC-gC-8SY"/>
+                        <outlet property="adjectiveProgressBar" destination="Rty-Y7-l5e" id="Kej-9F-G6E"/>
                         <outlet property="adjectiveTextField" destination="Hcu-mT-sxj" id="WoR-6m-gjx"/>
                     </connections>
                 </viewController>
@@ -223,12 +228,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWu-cU-7Q7">
+                                <rect key="frame" x="225" y="395" width="150" height="2"/>
+                                <color key="progressTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
                     <connections>
                         <outlet property="nounButton" destination="Zv6-jN-4vb" id="0g2-7W-Nij"/>
+                        <outlet property="nounProgressBar" destination="HWu-cU-7Q7" id="vbR-dA-RrZ"/>
                         <outlet property="nounTextField" destination="Lsq-Ph-DDr" id="rlU-e0-ekF"/>
                     </connections>
                 </viewController>
@@ -283,12 +293,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.33300000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="3pd-b7-TgH">
+                                <rect key="frame" x="225" y="395" width="150" height="2"/>
+                                <color key="progressTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
                     <connections>
                         <outlet property="verbButton" destination="wdK-EL-aGO" id="svy-eW-hhI"/>
+                        <outlet property="verbProgressBar" destination="3pd-b7-TgH" id="cIQ-8S-Xeo"/>
                         <outlet property="verbTextField" destination="hav-ka-ITG" id="u06-aP-iIH"/>
                     </connections>
                 </viewController>

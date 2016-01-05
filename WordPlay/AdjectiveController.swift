@@ -11,6 +11,7 @@ class AdjectiveController: UIViewController {
     
     @IBOutlet weak var adjectiveTextField: UITextField!
     @IBOutlet weak var adjectiveButton: UIButton!
+    @IBOutlet weak var adjectiveProgressBar: UIProgressView!
     
     var importMadLib = MadLib()
     

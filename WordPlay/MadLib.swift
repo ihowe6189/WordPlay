@@ -22,6 +22,10 @@ class MadLib{
 
     func createStory() -> String
     {
+        let selector = Int(10 * drand48())
+        print(selector) /*DEBUG*/
+        
+        
         return "Sometimes I stay up late at night, thinking about the effect of " + noun
                 + " on my  " + adjective + " turtle when he chooses to " + verb + " various parts of the house."
     }
