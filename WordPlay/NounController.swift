@@ -15,6 +15,8 @@ class NounController: UIViewController {
     @IBOutlet weak var nounTextField: UITextField!
     @IBOutlet weak var nounButton: UIButton!
     @IBOutlet weak var nounProgressBar: UIProgressView!
+    
+    var progressBarValue = 0.0
    
     
     override func viewDidLoad() {
@@ -31,48 +33,19 @@ class NounController: UIViewController {
         }
     }
     
-    func animateProgress(newValue: Double)
-    {
-        var oldValue = Int(100 * nounProgressBar.progress)
-        let newValue = Int(100 * newValue)
-        if oldValue != newValue
-        {
-            if(newValue > oldValue)
-            {
-                for i in oldValue...newValue
-                {
-                    //http://stackoverflow.com/questions/29743581/xcode-swift-ios-app-adding-delay
-                    dispatch_after(1,
-                        dispatch_get_main_queue()){
-                            nounProgressBar.progress = Float(i) / 100
-                    }
-                }
-            }
-            else
-            {
-                while oldValue >= newValue
-                {
-                    nounProgressBar.progress = Float(oldValue) / 100
-                    --oldValue
-                    //sleep(1)
-                }
-            }
-        }
-    }
+    
     
     @IBAction func nounTextFieldEditingChanged(sender: UITextField) {
         importMadLib.noun = nounTextField.text!
         if nounTextField.text != ""
         {
             nounButton.enabled = true
-            //nounProgressBar.progress = 0.333
-            animateProgress(0.333)
+            nounProgressBar.progress = 0.333
         }
         else
         {
             nounButton.enabled = false
-            //nounProgressBar.progress = 0
-            animateProgress(0)
+            nounProgressBar.progress = 0
         }
         
     }
