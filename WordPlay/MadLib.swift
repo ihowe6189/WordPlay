@@ -22,12 +22,23 @@ class MadLib{
 
     func createStory() -> String
     {
-        let selector = Int(10 * drand48())
-        print(selector) /*DEBUG*/
+        var loop = true
         
+            let selector = Int(10 * drand48())
+            print(selector) /*DEBUG*/
+            if selector < 4 {
+                return "Sometimes I stay up late at night, thinking about the effect of " + noun
+                    + " on my  " + adjective + " turtle when he chooses to " + verb + " various parts of the house."
+            }
+            else if selector > 6 {
+                return "One of President Lincoln's more " + adjective + " policy changes during his career involved the freedom for a " + noun + " to finally be able to " + verb + "."
+            }
+            else {
+                return ""
+            }
         
-        return "Sometimes I stay up late at night, thinking about the effect of " + noun
-                + " on my  " + adjective + " turtle when he chooses to " + verb + " various parts of the house."
+            
+        
     }
     
     func createNSStringStory() -> NSMutableAttributedString
