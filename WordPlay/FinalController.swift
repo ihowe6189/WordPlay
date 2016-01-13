@@ -19,16 +19,4 @@ class FinalController: UIViewController {
         finalTextView.attributedText = importMadLib.createNSStringStory()
         super.viewDidLoad()
     }
-    
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "nounToVerb"
-//        {
-//            let verbController = segue.destinationViewController as! VerbController
-//            verbController.importMadLib = importMadLib
-//            verbController.title = importMadLib.noun
-//        }
-//    }
-    
-    
-    
 }
