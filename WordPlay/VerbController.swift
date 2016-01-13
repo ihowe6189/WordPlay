@@ -14,19 +14,18 @@ class VerbController: UIViewController {
     @IBOutlet weak var verbTextField: UITextField!
     @IBOutlet weak var verbButton: UIButton!
     @IBOutlet weak var verbProgressBar: UIProgressView!
-    
-    
+    @IBOutlet weak var verbTenseLabel: UILabel!
     
     var importMadLib = MadLib()
 
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.lightBlueColor()
+        verbTenseLabel.text = importMadLib.verbTense
         super.viewDidLoad()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "verbToAdjective"
-        {
+        if segue.identifier == "verbToAdjective"{
             let adjectiveController = segue.destinationViewController as! AdjectiveController
             adjectiveController.importMadLib = importMadLib
             adjectiveController.title = importMadLib.verb
@@ -35,13 +34,13 @@ class VerbController: UIViewController {
  
     @IBAction func verbTextFieldEditingChanged(sender: UITextField) {
         importMadLib.verb = verbTextField.text!
-        if verbTextField.text != ""
-        {
+        if verbTextField.text != ""{
             verbButton.enabled = true
+            verbProgressBar.progress = 0.666
         }
-        else
-        {
+        else{
             verbButton.enabled = false
+            verbProgressBar.progress = 0.333
         }
     }
 

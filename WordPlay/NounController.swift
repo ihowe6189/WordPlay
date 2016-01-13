@@ -8,14 +8,17 @@
 
 import UIKit
 
-class NounController: UIViewController{
+class NounController: UIViewController {
     var importMadLib = MadLib()
     @IBOutlet weak var nounTextField: UITextField!
     @IBOutlet weak var nounButton: UIButton!
     @IBOutlet weak var nounProgressBar: UIProgressView!
+    @IBOutlet weak var nounTenseLabel: UILabel!
+    
     var progressBarValue = 0.0
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.lightRedColor()
+        nounTenseLabel.text = importMadLib.nounTense
         super.viewDidLoad()
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

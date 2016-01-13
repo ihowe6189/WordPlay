@@ -114,8 +114,14 @@
                                     <action selector="adjectiveTextFieldEditingChanged:" destination="s35-0e-1kh" eventType="editingChanged" id="4vF-lw-uPF"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scp-dh-Uht">
+                                <rect key="frame" x="253" y="349" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtU-XT-PdM">
-                                <rect key="frame" x="253" y="357" width="94" height="30"/>
+                                <rect key="frame" x="253" y="378" width="94" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Continue"/>
@@ -124,8 +130,8 @@
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.66600000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Rty-Y7-l5e">
-                                <rect key="frame" x="225" y="395" width="150" height="2"/>
-                                <color key="progressTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="225" y="416" width="150" height="2"/>
+                                <color key="progressTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -134,6 +140,7 @@
                     <connections>
                         <outlet property="adjectiveButton" destination="VtU-XT-PdM" id="RnC-gC-8SY"/>
                         <outlet property="adjectiveProgressBar" destination="Rty-Y7-l5e" id="Kej-9F-G6E"/>
+                        <outlet property="adjectiveTenseLabel" destination="scp-dh-Uht" id="Jad-dA-YSk"/>
                         <outlet property="adjectiveTextField" destination="Hcu-mT-sxj" id="WoR-6m-gjx"/>
                     </connections>
                 </viewController>
@@ -205,15 +212,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lsq-Ph-DDr">
-                                <rect key="frame" x="236" y="319" width="128" height="30"/>
+                                <rect key="frame" x="236" y="324" width="128" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="nounTextFieldEditingChanged:" destination="q3n-mq-cx9" eventType="editingChanged" id="Fjt-cO-JMm"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWe-hC-9zj">
+                                <rect key="frame" x="200" y="243" width="200" height="55"/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="46"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJ7-5Y-ldW">
+                                <rect key="frame" x="253" y="351" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zv6-jN-4vb">
-                                <rect key="frame" x="253" y="357" width="94" height="30"/>
+                                <rect key="frame" x="253" y="380" width="94" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -222,15 +241,9 @@
                                     <segue destination="D9d-Qd-0Wk" kind="show" identifier="nounToVerb" id="MMu-Gw-psd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWe-hC-9zj">
-                                <rect key="frame" x="200" y="243" width="200" height="55"/>
-                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="46"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWu-cU-7Q7">
-                                <rect key="frame" x="225" y="395" width="150" height="2"/>
-                                <color key="progressTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="225" y="418" width="150" height="2"/>
+                                <color key="progressTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -239,6 +252,7 @@
                     <connections>
                         <outlet property="nounButton" destination="Zv6-jN-4vb" id="0g2-7W-Nij"/>
                         <outlet property="nounProgressBar" destination="HWu-cU-7Q7" id="vbR-dA-RrZ"/>
+                        <outlet property="nounTenseLabel" destination="MJ7-5Y-ldW" id="c1u-TS-x12"/>
                         <outlet property="nounTextField" destination="Lsq-Ph-DDr" id="rlU-e0-ekF"/>
                     </connections>
                 </viewController>
@@ -278,8 +292,20 @@
                                     <action selector="verbTextFieldEditingChanged:" destination="D9d-Qd-0Wk" eventType="editingChanged" id="w7d-kH-azN"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Enter a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCB-B7-hGN">
+                                <rect key="frame" x="200" y="213" width="200" height="22"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNh-Ga-gmL">
+                                <rect key="frame" x="253" y="346" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdK-EL-aGO">
-                                <rect key="frame" x="253" y="357" width="94" height="30"/>
+                                <rect key="frame" x="253" y="375" width="94" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Continue"/>
@@ -287,15 +313,9 @@
                                     <segue destination="s35-0e-1kh" kind="show" identifier="verbToAdjective" id="P0W-S6-akO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Enter a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCB-B7-hGN">
-                                <rect key="frame" x="200" y="213" width="200" height="22"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.33300000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="3pd-b7-TgH">
-                                <rect key="frame" x="225" y="395" width="150" height="2"/>
-                                <color key="progressTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="225" y="413" width="150" height="2"/>
+                                <color key="progressTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -304,6 +324,7 @@
                     <connections>
                         <outlet property="verbButton" destination="wdK-EL-aGO" id="svy-eW-hhI"/>
                         <outlet property="verbProgressBar" destination="3pd-b7-TgH" id="cIQ-8S-Xeo"/>
+                        <outlet property="verbTenseLabel" destination="UNh-Ga-gmL" id="xgK-fi-Dn1"/>
                         <outlet property="verbTextField" destination="hav-ka-ITG" id="u06-aP-iIH"/>
                     </connections>
                 </viewController>

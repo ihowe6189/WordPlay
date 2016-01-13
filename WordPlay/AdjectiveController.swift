@@ -12,11 +12,13 @@ class AdjectiveController: UIViewController {
     @IBOutlet weak var adjectiveTextField: UITextField!
     @IBOutlet weak var adjectiveButton: UIButton!
     @IBOutlet weak var adjectiveProgressBar: UIProgressView!
+    @IBOutlet weak var adjectiveTenseLabel: UILabel!
     
     var importMadLib = MadLib()
     
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.lightGreenColor()
+        adjectiveTenseLabel.text = importMadLib.adjectiveTense
         super.viewDidLoad()
     }
     
@@ -34,11 +36,12 @@ class AdjectiveController: UIViewController {
         if adjectiveTextField.text != ""
         {
             adjectiveButton.enabled = true
+            adjectiveProgressBar.progress = 1
         }
         else
         {
             adjectiveButton.enabled = false
+            adjectiveProgressBar.progress = 0.666
         }
     }
-    
 }
